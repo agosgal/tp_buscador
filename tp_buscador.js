@@ -20,9 +20,13 @@
     // Me traigo el valor que ingresó
   buscador.addEventListener('keypress', function (event) {
       if (event.keyCode === 13) {
-    const elegida = buscador.value;
-    // Lo busco en API
-    const prom = fetch("https://www.omdbapi.com/?apikey=2fb7569a&t=" + elegida);
+    return cambioPeli()
+    }
+})
+
+const cambioPeli = () => {
+  const elegida = buscador.value;
+  const prom = fetch("https://www.omdbapi.com/?apikey=2fb7569a&t=" + elegida);
     console.log(prom);
     prom.then(res => res.json())
     .then (movie => {
@@ -39,8 +43,6 @@
       starring.innerHTML = movie.Actors;
       poster.src = movie.Poster;
       fondo.src = movie.Poster
-    }
-  })
-   
-} 
+}
 })
+}
