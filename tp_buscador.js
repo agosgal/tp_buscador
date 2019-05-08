@@ -10,6 +10,7 @@
   const directed = document.querySelector("#detalles .directed-by span");
   const starring = document.querySelector("#detalles .starring span");
   const poster = document.querySelector("#poster img");
+  const fondo = document.querySelector(".fondo img")
 
   //Esto me sirve para conocer el código de la tecla
   // buscador.addEventListener('keypress', function (event)    {
@@ -37,6 +38,7 @@
       directed.innerHTML = movie.sDirector
       starring.innerHTML = movie.Actors;
       poster.src = movie.Poster;
+      fondo.src = movie.Poster
     }
   })
    
