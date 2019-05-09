@@ -39,7 +39,7 @@ const cambioPeli = () => {
       genre.innerHTML = movie.Genre; 
       plot.innerHTML = movie.Plot;
       written.innerHTML = movie.Writer;
-      directed.innerHTML = movie.sDirector
+      directed.innerHTML = movie.Director
       starring.innerHTML = movie.Actors;
       poster.src = movie.Poster;
       fondo.src = movie.Poster
